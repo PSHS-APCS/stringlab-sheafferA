@@ -42,12 +42,10 @@ class FullName
 		 *                         NOTE: "any number" means it is possible not to have no Middle Name at all.
 		 *                         You can assume the user is not entering any extra spaces.
 		 */
-
-
-
-
-
-
+		int lastIndex = name.lastIndexOf(" ") + 1;
+		String lastName = name.substring(lastIndex);
+		String firstName = name.substring(0, lastIndex-1);
+		String lastNameFirst = lastName + ", " + firstName;
+		return lastNameFirst;
 	}
 }
-
